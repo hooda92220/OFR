@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Softer blue color palette */
+  --color-primary: #1a365d;
+  --color-secondary: #2563eb;
+  --color-accent: #3b82f6;
+  --color-background: #f8fafc;
+  --color-text: #1e293b;
+  
+  /* Muted blue variants */
+  --blue-50: #f0f5ff;
+  --blue-100: #e5edff;
+  --blue-200: #cddbfe;
+  --blue-300: #b4c6fc;
+  --blue-400: #8ba7f9;
+  --blue-500: #6b8af7;
+  --blue-600: #4b6bdb;
+  --blue-700: #3b4eb8;
+  --blue-800: #2c3d8f;
+  --blue-900: #1e2a5e;
+}
+
+/* Adjust standard blue colors */
+.text-blue-600 { color: var(--blue-600) !important; }
+.text-blue-700 { color: var(--blue-700) !important; }
+.bg-blue-600 { background-color: var(--blue-600) !important; }
+.bg-blue-700 { background-color: var(--blue-700) !important; }
+.bg-blue-900 { background-color: var(--blue-900) !important; }
+
+/* Adjust gradients */
+.bg-gradient-to-r {
+  &.from-blue-900 {
+    --tw-gradient-from: var(--blue-900) !important;
+  }
+  &.to-blue-700 {
+    --tw-gradient-to: var(--blue-700) !important;
+  }
+}
+
+/* Adjust border colors */
+.border-blue-600 { border-color: var(--blue-600) !important; }
+
+/* Adjust hover states */
+.hover\:bg-blue-700:hover { background-color: var(--blue-700) !important; }
+.hover\:text-blue-700:hover { color: var(--blue-700) !important; }
+
+/* Existing animations */
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes flow {
+  0% { transform: translateX(-100%) var(--rotation); }
+  100% { transform: translateX(100%) var(--rotation); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glow-line {
+  --rotation: rotate(0deg);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.4),
+              0 0 20px rgba(96, 165, 250, 0.2),
+              0 0 30px rgba(96, 165, 250, 0.1);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Enhanced highlight animation */
+@keyframes highlightPulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0.1);
+    transform: scale(1.01);
+  }
+}
+
+.highlight-pulse {
+  animation: highlightPulse 2s ease-in-out infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced modal animations */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-enter {
+  animation: modalSlideIn 0.3s ease-out forwards;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--blue-400) 0%, var(--blue-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ensure proper text rendering and prevent cutoff */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  overflow: visible;
+}
+
+/* Fix for gradient text clipping */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.1em;
+}
+
+/* YouTube Background Optimizations */
+.youtube-background {
+  pointer-events: none;
+  user-select: none;
+}
+
+.youtube-background iframe {
+  pointer-events: none;
+}
+
+/* Ensure video covers full area without letterboxing */
+.video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Enhanced text shadows for better readability over video */
+.hero-text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Backdrop blur support for better overlay effects */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-enhanced {
+    backdrop-filter: blur(10px);
+  }
+}
