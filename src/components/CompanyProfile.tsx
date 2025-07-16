@@ -13,34 +13,22 @@ const CompanyProfile = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                <img 
-                  src="/Assets/engineering.png" 
-                  alt="Our Expertise" 
-                  className="w-full h-full object-contain"
-                />
+              <div className="bg-blue-700 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                <Target className="h-12 w-12 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Our Expertise</h3>
               <p className="text-gray-600">Leading manufacturer of FRP/GRP/ARP/Optical Fibre Cables/ Fibre Accessories &  Passive products, delivering high-performance solutions at the forefront of the industry.</p>
             </div>
             <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                <img 
-                  src="/Assets/target.png" 
-                  alt="Our Mission" 
-                  className="w-full h-full object-contain"
-                />
+              <div className="bg-blue-700 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                <Target className="h-12 w-12 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
               <p className="text-gray-600">Delivering core strength and reliability to build the future for every valued customer</p>
             </div>
             <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                <img 
-                  src="/Assets/visibility.png" 
-                  alt="Our Vision" 
-                  className="w-full h-full object-contain"
-                />
+              <div className="bg-blue-700 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-12 w-12 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
               <p className="text-gray-600">To be recognized as one of the most respected companies for quality and commitment</p>
