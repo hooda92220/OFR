@@ -47,8 +47,6 @@ const OurJourney = () => {
         </div>
       ),
     },
-    {
-            }
       )
       title: "2022-2023",
       content: (
