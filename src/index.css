@@ -145,12 +145,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* YouTube Background Optimizations */
-.youtube-background {
+.video-background {
   pointer-events: none;
   user-select: none;
 }
 
-.youtube-background iframe {
+.video-background video {
   pointer-events: none;
 }
 
@@ -164,6 +164,7 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   height: auto;
   transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
 }
 
 /* Enhanced text shadows for better readability over video */
@@ -175,5 +176,34 @@ h1, h2, h3, h4, h5, h6 {
 @supports (backdrop-filter: blur(10px)) {
   .backdrop-blur-enhanced {
     backdrop-filter: blur(10px);
+  }
+}
+/* Video background specific styles */
+@media (max-width: 768px) {
+  .video-background video {
+    /* Ensure proper scaling on mobile */
+    width: 100vw;
+    height: 56.25vw; /* 16:9 aspect ratio */
+    min-height: 100vh;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .video-background video {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .video-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
 }

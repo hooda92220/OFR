@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Globe, Shield, Target, Users, Zap, MapPin, Award, Phone, Network, Satellite, Cable, Box, Wrench, Layers, Settings } from 'lucide-react';
-import YouTubeBackground from '../components/YouTubeBackground';
+import VideoBackground from '../components/VideoBackground';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -107,17 +107,19 @@ const HomePage = () => {
     <div className="min-h-screen">
       {/* Hero Section with YouTube Video Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* YouTube Video Background */}
-        <YouTubeBackground 
-          videoId="rDrjQyatgXQ"
+        {/* Local Video Background */}
+        <VideoBackground 
+          videoSrc="/Assets/hero-video.mp4"
+          posterSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
           className="z-0"
+          enableControls={true}
         />
         
         {/* Enhanced Overlay for Better Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/85 via-blue-800/70 to-blue-900/85 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/75 via-blue-800/60 to-blue-900/75 z-10"></div>
         
         {/* Additional overlay for mobile readability */}
-        <div className="absolute inset-0 bg-black/20 z-20 md:hidden"></div>
+        <div className="absolute inset-0 bg-black/30 z-20 md:hidden"></div>
 
         {/* Hero Content */}
         <div className="relative z-30 text-center px-4 py-20 max-w-6xl mx-auto">
