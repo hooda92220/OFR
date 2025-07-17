@@ -48,6 +48,8 @@ const OurJourney = () => {
       ),
     },
     {
+            }
+      )
       title: "2022-2023",
       content: (
         <div>
@@ -313,6 +315,8 @@ const OurJourney = () => {
 };
 
 export default OurJourney;
+  ]
+}
   ]
 }
   ]
