@@ -30,7 +30,7 @@ const OurJourney = () => {
             </h4>
             <div className="space-y-2">
               <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-               <div className="flex gap-2 items-center text-gray-600 text-xs md:text-sm">
+              <div className="flex gap-2 items-center text-gray-600 text-xs md:text-sm">
                 • Expanded production capacity to 190,000 KM per month
               </div>
               <div className="flex gap-2 items-center text-gray-600 text-xs md:text-sm">
@@ -315,15 +315,5 @@ const OurJourney = () => {
 };
 
 export default OurJourney;
-  ]
-}
-  ]
-}
-  ]
-}
-  ]
-}
-  ]
-}
   ]
 }
