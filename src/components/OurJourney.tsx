@@ -47,7 +47,7 @@ const OurJourney = () => {
         </div>
       ),
     },
-      )
+    {
       title: "2022-2023",
       content: (
         <div>
@@ -90,8 +90,6 @@ const OurJourney = () => {
       ),
     },
     {
-            }
-      )
       title: "2020-2021",
       content: (
         <div>
